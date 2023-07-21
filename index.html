@@ -34,7 +34,7 @@
 
                             <div class=" d-flex justify-content-between align-items-center">
                                 <p :class="{'text-decoration-line-through': singleToDo.done === true}"> {{ singleToDo.text }}</p>
-                                <span class="sym-hover text-danger" @click="onClickDelete"><i class="fa-regular fa-trash-can"></i> </span>
+                                <span class="sym-hover text-danger" @click="onClickDelete(singleToDo.id)"><i class="fa-regular fa-trash-can"></i> </span>
                             </div>
                         </li>
                     </ul>
