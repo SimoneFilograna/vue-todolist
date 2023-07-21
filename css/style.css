@@ -12,3 +12,14 @@ header{
     width: 60vw;
     margin-top: -50px;
 }
+
+
+.sym-hover{
+    cursor: pointer;
+    opacity: 0;
+}
+
+.single-list:hover div .sym-hover{
+    opacity: 1;
+}
+

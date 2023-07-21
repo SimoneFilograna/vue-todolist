@@ -26,7 +26,9 @@ createApp({
                     text: "Bere una coca-zero per festeggiare quanto fatto",
                     done: false,       
                 } 
-            ]
+            ],
+            //creato array di oggetti manualmente
+
         }
     }
 }).mount('#app')

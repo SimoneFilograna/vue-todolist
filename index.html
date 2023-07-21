@@ -22,13 +22,17 @@
             <div class="my-list-container">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control fs-4 shadow" placeholder="Inserisci qui cosa vuoi fare"  aria-describedby="button-addon1">
-                    <button class="btn btn-success px-4 py-4" type="button" id="button-addon1">Add</button>
+                    <button class="btn btn-success p-4" type="button" id="button-addon1">Add</button>
                 </div>
                 <div class="stamp-list">
                     <ul class="list-group list-group">
-                        <li class="list-group-item">An item</li>
-                        <li class="list-group-item">A second item</li>
-                        <li class="list-group-item">A third item</li>
+                        <li class="list-group-item fs-5 single-list"
+                            v-for="singleToDo in todoList">
+                            <div class=" d-flex justify-content-between align-items-center">
+                                <p>{{ singleToDo.text }}</p>
+                                <span class="sym-hover text-danger"><i class="fa-regular fa-trash-can"></i> </span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
