@@ -5,6 +5,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+
             todoList:[
                 {
                     id: 0,
@@ -31,9 +32,13 @@ createApp({
         }
     },
     methods: {
-        onClickDelete(){
-            console.log("funziono");
+
+        //cancello gli item quando clicco sul cestino
+        onClickDelete(indexId){
+            const delIndex = this.todoList.findIndex((singleItem) => singleItem.id === indexId);
+            this.todoList.splice(delIndex, 1);
             
+
         }
     }
 }).mount('#app')
