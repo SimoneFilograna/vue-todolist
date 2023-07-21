@@ -22,8 +22,8 @@
 
             <div class="my-list-container">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control fs-4 shadow" placeholder="Inserisci qui cosa vuoi fare"  aria-describedby="button-addon1">
-                    <button class="btn btn-success p-4" type="button" id="button-addon1">Add</button>
+                    <input type="text"  v-model="newItem.text" class="form-control fs-4 shadow" placeholder="Inserisci qui cosa vuoi fare"  >
+                    <button class="btn btn-success p-4" @click="onClickSend" >Add</button>
                 </div>
                 <div class="stamp-list">
                     <ul class="list-group list-group">
