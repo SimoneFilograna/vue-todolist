@@ -8,6 +8,7 @@ createApp({
             idNumIndex: 4,
 
             newItem : {
+                id: null,
                 text: "",
                 done: false
             },
@@ -39,6 +40,7 @@ createApp({
             
         }
     },
+
     methods: {
 
         //cancello gli item quando clicco sul cestino
@@ -54,9 +56,11 @@ createApp({
             this.todoList.push(cloneItem)            
         },
 
+
+        //evento enter on input
         enterPush(){
             const cloneItem = {...this.newItem};   
-            this.todoList.push(cloneItem)   
+            this.todoList.push(cloneItem)
         }
 
     }
