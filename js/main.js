@@ -14,7 +14,7 @@ createApp({
                 {
                     id: 1,
                     text: "Gaurdare Netflix per trovare errori",
-                    done: false,       
+                    done: true,       
                 }, 
                 {
                     id: 2,
@@ -24,11 +24,16 @@ createApp({
                 {
                     id: 3,
                     text: "Bere una coca-zero per festeggiare quanto fatto",
-                    done: false,       
+                    done: true,       
                 } 
             ],
             //creato array di oggetti manualmente
-
+        }
+    },
+    methods: {
+        onClickDelete(){
+            console.log("funziono");
+            
         }
     }
 }).mount('#app')
