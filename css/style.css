@@ -5,5 +5,10 @@ header{
 }
 
 .box-header{
-    height: 200px;
+    height: 350px;
+}
+
+.my-list-container{
+    width: 60vw;
+    margin-top: -50px;
 }
