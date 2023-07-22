@@ -46,7 +46,8 @@ createApp({
         //cancello gli item quando clicco sul cestino
         onClickDelete(indexId){
             const delIndex = this.todoList.findIndex((newItem) => newItem.id === indexId);
-            this.todoList.splice(delIndex, 1);           
+            this.todoList.splice(delIndex, 1);  
+            console.log(indexId)         
         },
 
         //creo la funzione per inviare i dati al click del bottone / add event on enterkey
@@ -54,9 +55,12 @@ createApp({
             ++this.idNumIndex;
             this.newItem.id = this.idNumIndex;
             const cloneItem = {...this.newItem};   
-            this.todoList.push(cloneItem)
+            this.todoList.push(cloneItem);
+            this.newItem.text = "";
             console.log(cloneItem)        
         },
+
+
 
 
     }
