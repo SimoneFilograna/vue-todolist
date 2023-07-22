@@ -5,10 +5,10 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            idNumIndex: 4,
+            idNumIndex: 3,
 
             newItem : {
-                id: null,
+                id: this.idNumIndex,
                 text: "",
                 done: false
             },
@@ -45,23 +45,19 @@ createApp({
 
         //cancello gli item quando clicco sul cestino
         onClickDelete(indexId){
-            const delIndex = this.todoList.findIndex((singleItem) => singleItem.id === indexId);
-            this.todoList.splice(delIndex, 1);  
-            console.log(indexId)         
+            const delIndex = this.todoList.findIndex((newItem) => newItem.id === indexId);
+            this.todoList.splice(delIndex, 1);           
         },
 
-        //creo la funzione per inviare i dati al click del bottone
+        //creo la funzione per inviare i dati al click del bottone / add event on enterkey
         onClickSend(){
-            const cloneItem = {...this.newItem};   
-            this.todoList.push(cloneItem)            
-        },
-
-
-        //evento enter on input
-        enterPush(){
+            ++this.idNumIndex;
+            this.newItem.id = this.idNumIndex;
             const cloneItem = {...this.newItem};   
             this.todoList.push(cloneItem)
-        }
+            console.log(cloneItem)        
+        },
+
 
     }
 }).mount('#app')
