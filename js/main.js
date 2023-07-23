@@ -60,6 +60,14 @@ createApp({
             console.log(cloneItem)        
         },
 
+        changeDone(singleElement){
+            if ( singleElement.done === false){
+                singleElement.done = true
+            } else {
+                singleElement.done = false
+            }
+        }
+
 
 
 
