@@ -60,6 +60,7 @@ createApp({
             console.log(cloneItem)        
         },
 
+        //function for change done on click
         changeDone(singleElement){
             if ( singleElement.done === false){
                 singleElement.done = true
